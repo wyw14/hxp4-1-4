@@ -27,11 +27,47 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.mode-selector {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.mode-btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ccc;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.mode-btn.active {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.mode-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .scores {
@@ -245,6 +281,21 @@ h1 {
   margin: 8px 0;
   color: #ccc;
   font-size: 0.95rem;
+}
+
+.mirror-hint {
+  margin-top: 12px !important;
+  padding: 10px 15px;
+  background: rgba(102, 126, 234, 0.15);
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+  color: #a5b4fc !important;
+  font-size: 0.9rem !important;
+  display: none;
+}
+
+.mirror-hint.visible {
+  display: block;
 }
 
 @media (max-width: 500px) {

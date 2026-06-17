@@ -10,6 +10,11 @@
   <div class="container">
     <h1>🎨 色彩记忆游戏</h1>
     
+    <div class="mode-selector">
+      <button id="mode-normal" class="mode-btn active" data-mode="normal">普通模式</button>
+      <button id="mode-mirror" class="mode-btn" data-mode="mirror">镜像模式</button>
+    </div>
+
     <div class="scores">
       <div class="score-item">
         <span class="score-label">当前关卡</span>
@@ -21,7 +26,7 @@
       </div>
     </div>
 
-    <div id="game-status" class="game-status">点击开始按钮开始游戏</div>
+    <div id="game-status" class="game-status">选择模式并点击开始按钮</div>
 
     <div class="game-board">
       <button class="color-btn red" data-color="red"></button>
@@ -35,11 +40,12 @@
     </div>
 
     <div class="instructions">
-      <h3>游戏规则</h3>
-      <p>1. 观察亮起的按钮顺序</p>
-      <p>2. 按相同顺序点击按钮</p>
-      <p>3. 每过一关，序列增加一个</p>
-      <p>4. 按错一次即游戏结束</p>
+      <h3 id="rules-title">普通模式规则</h3>
+      <p id="rule-1">1. 观察亮起的按钮顺序</p>
+      <p id="rule-2">2. 按相同顺序点击按钮</p>
+      <p id="rule-3">3. 每过一关，序列增加一个</p>
+      <p id="rule-4">4. 按错一次即游戏结束</p>
+      <p class="mirror-hint" id="mirror-hint">💡 镜像提示：红↔绿，黄↔蓝（中心对称位置）</p>
     </div>
   </div>
 
